@@ -18,12 +18,13 @@ def chat_node(state: ChatState):
     response = llm.invoke(messages)
     return {"messages": [response]}
 
-# Checkpointer
+# Checkpointer 
 checkpointer = InMemorySaver()
 
 graph = StateGraph(ChatState)
 graph.add_node("chat_node", chat_node)
 graph.add_edge(START, "chat_node")
 graph.add_edge("chat_node", END)
+
 
 chatbot = graph.compile(checkpointer=checkpointer)
