@@ -4,7 +4,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 import uuid
 
 # **************************************** utility functions *************************
-
+ 
 def generate_thread_id():
     thread_id = uuid.uuid4()
     return thread_id
@@ -98,3 +98,4 @@ if user_input:
 
 
     st.session_state['message_history'].append({'role': 'assistant', 'content': ai_message})
+
