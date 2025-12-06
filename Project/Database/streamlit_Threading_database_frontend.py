@@ -64,7 +64,7 @@ for thread_id in st.session_state['chat_threads'][::-1]:
         st.session_state['message_history'] = temp_messages
 
 
-# **************************************** Main UI ************************************
+# **************************************** Main UI ***********************************
 
 # loading the conversation history
 for message in st.session_state['message_history']:
@@ -98,6 +98,7 @@ if user_input:
 
 
     st.session_state['message_history'].append({'role': 'assistant', 'content': ai_message})
+
 
 
 
