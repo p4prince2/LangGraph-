@@ -38,7 +38,7 @@ if 'chat_threads' not in st.session_state:
 add_thread(st.session_state['thread_id'])
 
 
-# **************************************** Sidebar UI *********************************
+# **************************************** Sidebar UI ********************************
 
 st.sidebar.title('LangGraph Chatbot')
 
@@ -98,5 +98,6 @@ if user_input:
 
 
     st.session_state['message_history'].append({'role': 'assistant', 'content': ai_message})
+
 
 
