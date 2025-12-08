@@ -3,7 +3,7 @@ from langgraph_backend import chatbot
 from langchain_core.messages import HumanMessage, AIMessage
 import uuid
 
-# *************************************** utility functions *************************
+# ************************************** utility functions *************************
  
 def generate_thread_id():
     thread_id = uuid.uuid4()
@@ -98,5 +98,6 @@ if user_input:
 
 
     st.session_state['message_history'].append({'role': 'assistant', 'content': ai_message})
+
 
 
